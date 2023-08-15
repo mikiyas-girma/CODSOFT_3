@@ -1,5 +1,5 @@
 # CODSOFT Web Development Internship Repository
-<img src="https://lh3.googleusercontent.com/Gngzhz_ynFs_b48C0GzM93D9bO5vAyNk67IHY1ANvv8KZ5a4nqiNkVrXACUTGZih16OwjxqEWHr9cqv7tzl0UnuMzlcTn2aFcbYrVjKViuU23M1TH94yGNSt8-CI6wY9W9-q-BRbA8uEET6gmgXn1hk" alt="CODSOFT Logo" style="width: 200px; height: 200px;">
+<img src="https://lh3.googleusercontent.com/Gngzhz_ynFs_b48C0GzM93D9bO5vAyNk67IHY1ANvv8KZ5a4nqiNkVrXACUTGZih16OwjxqEWHr9cqv7tzl0UnuMzlcTn2aFcbYrVjKViuU23M1TH94yGNSt8-CI6wY9W9-q-BRbA8uEET6gmgXn1hk" alt="CODSOFT Logo" style="height: 200px;">
 
 ![CODSOFT Logo](https://lh3.googleusercontent.com/Gngzhz_ynFs_b48C0GzM93D9bO5vAyNk67IHY1ANvv8KZ5a4nqiNkVrXACUTGZih16OwjxqEWHr9cqv7tzl0UnuMzlcTn2aFcbYrVjKViuU23M1TH94yGNSt8-CI6wY9W9-q-BRbA8uEET6gmgXn1hk)
 Welcome to the **CODSOFT Web Development Internship Repository**! 
