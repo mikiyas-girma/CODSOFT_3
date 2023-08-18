@@ -3,12 +3,15 @@
 
 * {
   box-sizing: border-box;
+  background-color: #1A120B;
   
 }
 
 .content {
   text-align: center;
 }
+
+
 
 .item {
   padding: 3px;
@@ -32,12 +35,13 @@
 
 
 .screen {
+  color: #E5E5CB;
   display: grid;
   height: 100px;
   font-size: 30px;
   padding-bottom: 20px;
   border-radius: 10px;
-  border: 10px solid rgb(148, 16, 33);
+  border: 10px solid #D5CEA3;
   border-bottom: none;
   /* grid-area: screen; */
 }
@@ -46,8 +50,8 @@
   display: grid;
   font-size: 30px;
   padding-top: 10px;
-  border: 10px solid  rgb(148, 16, 33);
-  border-top: 5px solid  rgb(148, 16, 33);
+  border: 10px solid  #D5CEA3;
+  border-top: 5px solid  #D5CEA3;
    /* grid-area: board; */
   grid-template-columns: 1fr repeat(3,1fr);
 }
