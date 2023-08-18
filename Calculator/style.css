@@ -17,6 +17,7 @@
   border: 3px solid rgba(241, 206, 2, 0.863);
   background-color: rgb(214, 255, 226); 
   
+  cursor: pointer;
 }
 
 
@@ -32,6 +33,7 @@
 
 .screen {
   display: grid;
+  height: 100px;
   font-size: 30px;
   padding-bottom: 20px;
   border-radius: 10px;
