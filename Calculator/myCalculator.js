@@ -17,13 +17,19 @@ buttons.forEach((button) => {
     } else if(button.textContent === "␡") {
       console.log('deleted');
      } else {
-      inputs.push(button.textContent);
-      calculate(inputs);
+      let last = inputs[inputs.length - 1];
+      if(operators.includes(last) && operators.includes(button.textContent)) {
+        inputs.pop();
+        inputs.push(button.textContent);
+        calculate(inputs);
+      } else {
+        inputs.push(button.textContent);
+        calculate(inputs);
+      }
     }
     // console.log(button.textContent);
   });
 });
-del.addEventListener('click', delInput)
 
 
 
