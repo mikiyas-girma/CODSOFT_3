@@ -4,7 +4,7 @@ const resultScreen = document.querySelector('.result-screen');
 const AC = document.querySelector('.clearAll');
 const del = document.querySelector('.delete');
 const buttons = document.querySelectorAll('.item');
-const operators = ["-", "+", "÷", "*", "="];
+const operators = ["-", "+", "/", "*"];
 let output = "";
 
 // event listener for buttons
@@ -22,7 +22,16 @@ buttons.forEach((button) => {
         inputs.pop();
         inputs.push(button.textContent);
         calculate(inputs);
-      } else {
+      } else if(button.textContent === "=") {
+        if(!operators.includes(last)) {
+          calculate(inputs);
+          inputScreen.textContent = "";
+        } else {
+          inputs.pop();
+          calculate(inputs);
+        }
+      }
+       else {
         inputs.push(button.textContent);
         calculate(inputs);
       }
@@ -34,7 +43,14 @@ buttons.forEach((button) => {
 
 
 function calculate(value) {
+  let userInputs = Array.from(value);
+  last = userInputs[userInputs.length - 1];
   inputScreen.textContent = value.join("");
+  if(!operators.includes(last)) {
+    
+    output = eval(value.join(""));
+    resultScreen.textContent = output;
+  } 
   console.log(value);
 }
 
