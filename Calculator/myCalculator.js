@@ -4,7 +4,7 @@ const resultScreen = document.querySelector('.result-screen');
 const AC = document.querySelector('.clearAll');
 const del = document.querySelector('.delete');
 const buttons = document.querySelectorAll('.item');
-const operators = ["$", "+", "÷", "×", "="];
+const operators = ["-", "+", "÷", "*", "="];
 let output = "";
 
 // event listener for buttons
@@ -12,19 +12,24 @@ let output = "";
 let inputs = [];
 buttons.forEach((button) => {
   button.addEventListener('click', function() {
-    inputs.push(button.textContent);
-    calculate(inputs);
+    if(button.textContent === "AC") {
+      clear();
+    } else if(button.textContent === "␡") {
+      console.log('deleted');
+     } else {
+      inputs.push(button.textContent);
+      calculate(inputs);
+    }
     // console.log(button.textContent);
   });
 });
-
-AC.addEventListener('click', clear);
 del.addEventListener('click', delInput)
 
 
 
 function calculate(value) {
-console.log(value);
+  inputScreen.textContent = value.join("");
+  console.log(value);
 }
 
 
@@ -33,7 +38,8 @@ function delInput() {
 }
 
 function clear() {
-  inputScreen = "";
-  resultScreen = "";
+  inputScreen.textContent = "";
+  resultScreen.textContent = "";
+  inputs = [];
   output = "";
 }
