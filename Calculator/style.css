@@ -12,8 +12,16 @@
 }
 
 
+.input-screen {
+  text-align: start;
+}
+.result-screen {
+  text-align: end;
+  padding-right: 15px;
+}
 
-.item {
+
+.item, .brackets {
   padding: 3px;
   border-radius: 8px;
   margin: 5px;
@@ -54,5 +62,5 @@
   border: 10px solid  #D5CEA3;
   border-top: 5px solid  #D5CEA3;
    /* grid-area: buttons; */
-  grid-template-columns: 1fr repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr) 1fr ;
 }
