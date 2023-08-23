@@ -24,7 +24,10 @@ buttons.forEach((button) => {
     }
 
     else if(button.textContent === "␡") {
-    console.log('deleted');
+    let rem = inputs.join("").toString().slice(0 , -1);
+      inputs =[rem];
+      calculate(inputs);
+      console.log(inputs);
     }
 
     else if (button.textContent === "=") {
@@ -110,15 +113,6 @@ buttons.forEach((button) => {
         inputs.push(button.textContent);
         calculate(inputs);
       }
-
-      // else if(last !== "." && !operators.includes(last) && button.textContent !== ".") {
-        // console.log('hey hey ');
-        // inputs.push(button.textContent);
-        // calculate(inputs);
-      // }
-
-//this
-
       else if(operators.includes(last) && operators.includes(button.textContent)) {
         if(button.textContent !== "-") {
         inputs.pop();
@@ -127,31 +121,8 @@ buttons.forEach((button) => {
         calculate(inputs);
       }
 
-      else {
-        // inputs.push(button.textContent);
-        // calculate(inputs);
-      }
-
-      // else if ((operators.includes(button.textContent) && operators.includes(last)  && button.textContent !== "." ) || lastIndexOfOperator >= res.toString().lastIndexOf(".")) {
-
-      //     if(last !== "-" && operators.includes(button.textContent)) {
-      //     inputs.pop();
-      //     inputs.push(button.textContent);
-      //     calculate(inputs);
-      //   }
-      //   else {
-      //     if(button.textContent !== ".")
-      //     // inputs.push(button.textContent);
-      //   calculate(inputs);
-      // }
-      // if(button.textContent !== ".")
-      //   inputs.push(button.textContent);
-      //   calculate(inputs);
-      // }
-      // inputs = [resultScreen.textContent];
     }
       
-      // let last = inputs[inputs.length - 1];
 
     else if(operators.includes(inputs[inputs.length - 1]) && operators.includes(inputs[inputs.length - 2]) && operators.includes(button.textContent) && button.textContent !== "-") {
         inputs.pop();
@@ -205,7 +176,7 @@ function calculate(value) {
       }
       
     } catch (error) {
-      if(last !== "."){
+      if(last !== "." && inputs.length > 1){
         resultScreen.textContent = 'FORMAT ERROR';
         resultScreen.style.color = "red";
       }
