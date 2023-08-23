@@ -44,6 +44,13 @@ buttons.forEach((button) => {
       
     }
 
+    else if(button.textContent === "π") {
+      if(inputs.length >= 1)
+      inputs.push('*');
+      inputs.push('3.142');
+      calculate(inputs);
+    }
+
     else if (inputs.includes(".")) {
 
        if(operators.includes(last) && !operators.includes(button.textContent)) {
