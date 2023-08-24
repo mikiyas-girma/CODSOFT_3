@@ -95,7 +95,7 @@ buttons.forEach((button) => {
         inputs.pop();
         calculate(inputs);
       } 
-// //
+
       if(lastIndexOfOperator >= res.toString().lastIndexOf(".")) {
         if( button.textContent !== "-" && !operators.includes(button.textContent)) {
           inputs.push(button.textContent);
@@ -129,7 +129,7 @@ buttons.forEach((button) => {
     }
       
 
-    else if(operators.includes(inputs[inputs.length - 1]) && operators.includes(inputs[inputs.length - 2]) && operators.includes(button.textContent) && button.textContent !== "-") {
+    else if(operators.includes(last) && operators.includes(inputs[inputs.length - 2]) && operators.includes(button.textContent) && button.textContent !== "-") {
         inputs.pop();
         calculate(inputs);
       }
@@ -193,7 +193,6 @@ function calculate(value) {
       }
     }
   } 
-  console.log(value);
 }
 
 function clear() {
