@@ -33,12 +33,11 @@ buttons.forEach((button) => {
     else if (button.textContent === "=") {
       if (operators.includes(last)) {
         inputs.pop();
-        inputs = [resultScreen.textContent];
-        calculate(inputs);
+         calculate(inputs);
         inputScreen.textContent = "";
 
       } 
-      inputs = [resultScreen.textContent];
+         inputs = [output];
         calculate(inputs);
         inputScreen.textContent = "";
       
@@ -47,6 +46,8 @@ buttons.forEach((button) => {
     else if(button.textContent === "π") {
       if(inputs.length >= 1)
       inputs.push('*');
+      if(operators.includes(last))
+      inputs.pop();
       inputs.push('3.142');
       calculate(inputs);
     }
@@ -54,11 +55,20 @@ buttons.forEach((button) => {
     else if (inputs.includes(".")) {
 
        if(operators.includes(last) && !operators.includes(button.textContent)) {
-        inputs.push(button.textContent);
+        // inputs.push(button.textContent);
         calculate(inputs);
       }
 
       if(!operators.includes(last) && operators.includes(button.textContent)) {
+        if(last === ".")
+        inputs.pop();
+        inputs.push(button.textContent);
+        calculate(inputs);
+      }
+
+      if(last === "." && !operators.includes(button.textContent)) {
+        if(button.textContent === ".")
+        inputs.pop();
         inputs.push(button.textContent);
         calculate(inputs);
       }
@@ -67,6 +77,7 @@ buttons.forEach((button) => {
         if(button.textContent !== "-") {
         inputs.pop();
         inputs.push(button.textContent);
+        calculate(inputs);
       }
       if(!operators.includes(inputs[inputs.length - 2]) && button.textContent === "-") {
         inputs.push(button.textContent);
@@ -75,31 +86,33 @@ buttons.forEach((button) => {
       }
 
 
-      if (inputs[inputs.length - 1] === "." && button.textContent === ".") {
+      if (last === "." && button.textContent === ".") {
         inputs.pop();
         inputs.push(button.textContent);
       }
 
-     else if (!operators.includes(inputs[inputs.length - 1]) && button.textContent === "." && lastIndexOfOperator >= res.toString().lastIndexOf(".")) {
-
-        inputs.push(button.textContent);
+      if(operators.includes(last) && operators.includes(inputs[inputs.length - 2]) && operators.includes(button.textContent) && button.textContent !== "-") {
+        inputs.pop();
         calculate(inputs);
+      } 
+// //
+      if(lastIndexOfOperator >= res.toString().lastIndexOf(".")) {
+        if( button.textContent !== "-" && !operators.includes(button.textContent)) {
+          inputs.push(button.textContent);
+          calculate(inputs);
+          }
       }
 
-      else if ((operators.includes(last) && operators.includes(button.textContent) && button.textContent !== ".")   || lastIndexOfOperator >= res.toString().lastIndexOf(".") ) {
+      else if ((operators.includes(last) && operators.includes(button.textContent) && button.textContent !== ".") ) {
 
-        if( button.textContent !== "-" && !operators.includes(button.textContent)) {
+        if( button.textContent !== "-") {
         inputs.pop();
         inputs.push(button.textContent);
         calculate(inputs);
         }
         else {
-          if(operators.includes(inputs[inputs.length - 1]) && operators.includes(inputs[inputs.length - 2]) && operators.includes(button.textContent) && button.textContent !== "-") {
-            inputs.pop();
-            calculate(inputs);
-          } 
-          
-            inputs.push();
+          if(!operators.includes(button.textContent))
+            inputs.push(button.textContent);
             calculate(inputs);
           
         }
@@ -110,23 +123,8 @@ buttons.forEach((button) => {
         inputs.push(button.textContent);
         calculate(inputs);
       }
-      
-      else if (last === "." && button.textContent !== ".") {
-        if (operators.includes(button.textContent)) {
 
-          // inputs.pop();
-        }
 
-        inputs.push(button.textContent);
-        calculate(inputs);
-      }
-      else if(operators.includes(last) && operators.includes(button.textContent)) {
-        if(button.textContent !== "-") {
-        inputs.pop();
-        }
-        inputs.push(button.textContent);
-        calculate(inputs);
-      }
 
     }
       
@@ -165,10 +163,16 @@ buttons.forEach((button) => {
 
 // Calculate function
 function calculate(value) {
-  let userInputs = Array.from(value);
-  last = userInputs[userInputs.length - 1];
-  let expression = value.join("");
-  inputScreen.textContent = expression;
+      let userInputs = Array.from(value);
+      last = userInputs[userInputs.length - 1];
+      let expression = value.join("");
+      inputScreen.textContent = expression;
+
+      if(userInputs.length > 16) {
+        inputScreen.style.fontSize = "22px";
+        resultScreen.style.fontSize = "22px";
+      }
+
   if(!operators.includes(last)) {
     try {
 
@@ -178,8 +182,8 @@ function calculate(value) {
       } 
       else {
         output = eval(expression.replace("%", "/100"));
-        resultScreen.textContent = output;
-      
+        formattedResult = Number(output).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 5 });
+        resultScreen.textContent = formattedResult;
       }
       
     } catch (error) {
@@ -192,14 +196,11 @@ function calculate(value) {
   console.log(value);
 }
 
-
-function delInput() {
-
-}
-
 function clear() {
   inputScreen.textContent = "";
   resultScreen.textContent = "";
   inputs = [];
   output = "";
 }
+
+

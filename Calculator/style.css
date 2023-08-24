@@ -14,10 +14,12 @@
 
 .input-screen {
   text-align: start;
+  font-size: 25px;
 }
 .result-screen {
   text-align: end;
   padding-right: 15px;
+  font-size: 25px;
 }
 
 
