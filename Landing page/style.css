@@ -1,0 +1,28 @@
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+
+.top {
+  display: grid;
+  grid-auto-flow: column;
+  font-size: 25px;
+  padding: 25px;
+  background-color: rgba(244, 223, 78, 0.8);
+  /* border: 2px solid rgba(0, 0, 102, 0.6); */
+  box-shadow: #000066 ;
+}
+
+.nav-bar {
+  margin-left: auto;
+  grid-column-start: 8;
+  grid-column-end: 10;
+}
+
+.item {
+  color: #000066;
+  color: #107896;
+  margin: 10px;
+}
