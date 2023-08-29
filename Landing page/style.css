@@ -12,7 +12,7 @@
   padding: 25px;
   background-color: rgba(244, 223, 78, 0.8);
   /* border: 2px solid rgba(0, 0, 102, 0.6); */
-  box-shadow: #000066 ;
+  box-shadow: 0px 2px 8px 2px #151610;;
 }
 
 .nav-bar {
@@ -25,4 +25,79 @@
   color: #000066;
   color: #107896;
   margin: 10px;
+}
+
+#title {
+  font-size: 50px;
+  font-family:  serif;
+  text-align: center;
+  padding-top: 50px;
+  
+  
+}
+.content {
+  /* background-color: rgba(244, 223, 78, 0.4); */
+  height: 800px;
+}
+
+.content-body {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "left right"
+  "services services";
+  
+}
+
+
+
+
+.left {
+  grid-area: left;
+}
+
+.services {
+  grid-area: services;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  
+  justify-content: end;
+}
+
+.services >div {
+  border: 3px solid #ccd863;
+  width: 76%;
+  height: 250px;
+}
+
+.right {
+  grid-area: right;
+  box-shadow: 25px 8px 98px #ccd863;
+  height: 250px;
+  margin: 200px;
+  padding: 50px;
+  
+  
+}
+
+.part {
+  margin: 20px;
+}
+
+
+
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+  height: 100px;
+  font-size: 25px;
+  margin-top: 100px;
+  padding: 25px;
+  background-color: rgba(235, 239, 208, .4);
+  box-shadow: 10px 2px 11px 2px #d6ee5e;
 }
