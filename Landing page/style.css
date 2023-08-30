@@ -103,11 +103,13 @@
   "footer footer footer"; */
 
   justify-content: space-between;
+  background-color: rgba(252, 198, 20, 0.473);
 }
 
 
 .services >div>p {
-  font-family: 'Roboto', roboto;
+  font-family: roboto;
+  color: rgb(77, 25, 25);
   font-size: 19px;
   box-shadow: 25px 8px 98px #ccd863;
 }
@@ -140,7 +142,8 @@
   align-items: flex-start;
   padding: 15px;
   margin-top: 0;
-  border: 2px solid darkorange;
+  border: 7px solid rgb(139, 201, 58);
+  border-radius: 17px;
 }
 
 
