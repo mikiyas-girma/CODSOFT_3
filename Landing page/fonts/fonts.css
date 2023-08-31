@@ -34,3 +34,7 @@
   font-family: roboto;
   src: url(/fonts/texgyreadventor-regular.otf);
 }
+@font-face {
+  font-family: brank;
+  src: url(/fonts/allenoire-allenoire-regular-400.ttf);
+}
