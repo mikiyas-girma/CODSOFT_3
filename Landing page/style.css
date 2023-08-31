@@ -3,11 +3,20 @@
 * {
   box-sizing: border-box;
   margin: auto;
+  background-image: linear-gradient(
+    to right,
+  pink 0%,
+  pink 50%,
+  paleturquoise 50%,
+  paleturquoise 100%
+  );
+  line-height: 100%;
 }
 
 body {
   height: 100vh;
   background-color: #3ab4f2;
+
 }
 
 
@@ -20,6 +29,7 @@ body {
   background-color: #3ab4f2;
   /* border: 2px solid rgba(0, 0, 102, 0.6); */
   box-shadow: 0px 2px 8px 2px #151610;
+  
 }
 
 .nav-bar {
@@ -117,9 +127,10 @@ body {
 
 .services >div>p {
   font-family: roboto;
-  color: rgb(77, 25, 25);
+  /* color: rgb(77, 25, 25); */
+  color: #000000;
   font-size: 19px;
-  box-shadow: 25px 8px 98px #ccd863;
+  /* box-shadow: 25px 8px 98px #ccd863; */
 }
 
 .heading {
@@ -151,6 +162,7 @@ body {
   padding: 15px;
   margin-top: 0;
   border: 7px solid rgb(139, 201, 58);
+  border: 7px solid #0078aa;
   border-radius: 17px;
 }
 
@@ -163,7 +175,7 @@ body {
   font-size: 25px;
   /* margin-top: 100px; */
   padding: 25px;
-  background-color: rgba(235, 239, 208, .4);
+  /* background-color: rgba(235, 239, 208, .4); */
   box-shadow: 10px 2px 11px 2px #d6ee5e;
   
 }
