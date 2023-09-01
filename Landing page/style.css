@@ -4,10 +4,7 @@
   box-sizing: border-box;
   margin: auto;
  
-  /* background-image: url(images/oleg-chursin-vaPoJZB9Mzg-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
+ 
 }
 
 body {
@@ -111,14 +108,6 @@ body {
 }
 
 
-
-.content {
-  /* background-color: rgba(244, 223, 78, 0.4); */
-  height: 800px;
-  /* margin: 10px; */
-
-}
-
 .content-body {
   display: grid;
   grid-auto-flow: column;
@@ -207,9 +196,16 @@ body {
   /* background-color: rgba(252, 198, 20, 0.473);
   background-color: #3ab4f2; */
   margin-top: 0;
-margin-bottom: 0;
+margin-bottom: 3px;
   
-  
+background-image: linear-gradient(
+  to right,
+    /* #3ab4f2 50%,
+    #f2df3a 50% */
+    #ffb740 50%,
+    #64c9cf 0%
+
+);
 }
 
 
@@ -254,6 +250,8 @@ margin-bottom: 0;
   /* background-color: #fff; */
 }
 .rental {
+  font-family: EU-bold;
+  color: #07060f;
   grid-area: rental;
   /* background-image: linear-gradient(
     to right,
@@ -273,6 +271,7 @@ margin-bottom: 0;
       #64c9cf 0%
 
   );
+  height: 170px;
 }
 
 .best, .terms, .rental, .heading {
@@ -289,56 +288,74 @@ margin-bottom: 0;
 
 }
 
-
-
-
 .samples {
   grid-area: samples;
   display: flex;
-  /* flex-direction: column; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns:max-content;
   grid-auto-flow: column;
-  justify-content: space-between;
-  column-gap: 40px;
-  margin-top: 160px;
+  /* justify-content: space-between; */
+  /* column-gap: 40px; */
+  /* margin-top: 160px; */
   padding: 50px;
 
   background-image: linear-gradient(
-    to right,
+    to left,
       /* #3ab4f2 50%,
       #f2df3a 50% */
       #ffb740 50%,
-      #64c9cf 0%
+      #64c9cf 50%
 
   );
-  
+  width: 100%;
 }
 
 
 .img1, .img2, .img3 {
   justify-self: stretch;
   padding: 15px;
-  margin-top: 0px;
+  /* margin-top: 0px; */
   /* border: 7px solid rgb(139, 201, 58); */
   /* border: 7px solid #fff; */
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0px 8px 5px rgb(41, 32, 30);
 
+  background-image: linear-gradient(
+    to left,
+      /* #3ab4f2 50%,
+      #f2df3a 50% */
+      #ffb740 50%,
+      #64c9cf 50%
 
+  );
 
 }
 
+
+.bottom {
+  grid-area: bottom;
+  text-align: center;
+}
 
 
 .footer {
   grid-area: footer;
   font-size: 25px;
-  margin-top: 200px;
-  padding: 25px;
+  /* margin-top: 100px; */
+  padding: 100px;
+  padding-bottom: 20px;
   /* background-color: rgba(235, 239, 208, .4); */
   box-shadow: 10px 2px 11px 2px #d6ee5e;
   box-shadow: 10px 2px 11px 2px #141412;
+
+  background-image: linear-gradient(
+    to left,
+      /* #3ab4f2 50%,
+      #f2df3a 50% */
+      #ffb740 50%,
+      #64c9cf 50%
+
+  );
+  margin-bottom: 0;
 
 
   
