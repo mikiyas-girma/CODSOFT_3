@@ -68,12 +68,6 @@ body {
   "left "
   "services"
   "samples";
-
-  /* for smaller screens */
-  /* grid-template-areas: 
-  "right right"
-  "left left"
-  "services services"; */
   margin-bottom: 0;
   padding-bottom: 0;
 
@@ -161,14 +155,14 @@ margin-bottom: 0;
   display: flex;
   flex-direction: column;
   margin-top: 0;
+  border-radius: 11px;
   box-shadow: 0px 8px 5px rgb(41, 32, 30);
+  box-shadow: 0px 1px 1px 1px rgba(160, 104, 0, .5); 
 
 }
 
 .samples {
-  grid-area: samples;
   display: flex;
-  grid-template-columns:max-content;
   grid-auto-flow: column;
   padding: 50px;
 
@@ -183,14 +177,14 @@ margin-bottom: 0;
   width: 100%;
 }
 
-
-.img1, .img2, .img3 {
-  justify-self: stretch;
+.img {
+  display: flex;
+  flex-direction: column;
   padding: 15px;
-  /* box-shadow: 0px 8px 5px rgb(41, 32, 30);
-  box-shadow: 0px 12px 11px 2px #64c9cf; */
-
+  /* box-shadow: 0px 8px 5px rgb(41, 32, 30); */
+  box-shadow: 0px 1px 1px 1px rgba(160, 104, 0, .5); 
 }
+
 
 
 .bottom {
@@ -276,6 +270,110 @@ margin-bottom: 0;
 
 @media (max-width: 788px) {
 
+
+  .rental {
+    display: none;
+  }
+
+  .content-body {
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: .3fr 1fr;
+
+  }
+
+  .left {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1 ;
+    margin-bottom: 10px;
+  }
+  .services {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   
+    grid-template-areas: 
+    "heading"
+    "best"
+    "rental";
+
+    background-image: linear-gradient(
+      to right,
+        #ffb740 100%,
+        #64c9cf 50%
+  
+    );
+    justify-content: center;
+  }
+
+  .heading, .best {
+    margin: 0px 0px;
+  }
+
+  .samples {
+    flex-direction: column ;
+    justify-content: center;
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+  }
+  
+  .img {
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+
+
+}
+
+@media (max-width: 565px) {
+
+  .content-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr .5fr 1fr;
+    
+
+  }
+  .left {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
+
+  .services {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+
+    background-image: linear-gradient(
+      to right,
+        #ffb740 50%,
+        #64c9cf 50%
+  
+    );
+  }
+
+ .heading, .best {
+    width: 75%;
+    margin: auto;
+  }
+
+  .samples {
+    margin: auto;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+
+    background-image: linear-gradient(
+      to right,
+        #ffb740 50%,
+        #64c9cf 50%
+  
+    );
+  }
+
+
+
+
 
 }
