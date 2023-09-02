@@ -16,30 +16,45 @@ body {
   );
 }
 
-
-.top {
+.navbar {
+  position: fixed;
+  top: 0;
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: .5fr .5fr;
-  font-size: 25px;
-
-  grid-template-areas: 
-    ". nav-bar";
-    padding: 10px;
-
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  color: #fff;
+  padding: 10px 20px;
 }
 
-.nav-bar {
-  grid-area: nav-bar;
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu ul {
+  list-style: none;
   display: flex;
-  padding: 10px;
-  
+  justify-content: flex-end;
 }
 
-.item {
-  color: #f6f6f6;
-  text-align: start;
+.menu li {
+  font-size: 20px;
+  margin-right: 20px;
 }
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color .8s;
+}
+
+.menu a:hover {
+  color: #FF5733;
+}
+
+
 
 #title {
   font-size: 80px;
@@ -94,15 +109,6 @@ body {
   grid-template-areas: 
   "best . heading"
   ". rental .";
-
-  /* for smaller screens */
-  /* grid-template-areas: 
-  "heading heading heading"
-  "best best best"
-  "rental rental rental"
-  "terms terms terms"
-  ". . ."
-  "footer footer footer"; */
 
   justify-content: space-between;
   margin-top: 0;
@@ -181,7 +187,6 @@ margin-bottom: 0;
   display: flex;
   flex-direction: column;
   padding: 15px;
-  /* box-shadow: 0px 8px 5px rgb(41, 32, 30); */
   box-shadow: 0px 1px 1px 1px rgba(160, 104, 0, .5); 
 }
 
@@ -318,11 +323,8 @@ margin-bottom: 0;
   }
   
   .img {
-    gap: 20px;
-    justify-content: space-between;
     padding: 10px;
     margin-top: 20px;
-    justify-content: center;
   }
 
 
@@ -331,9 +333,22 @@ margin-bottom: 0;
 
 @media (max-width: 565px) {
 
+
+  #title {
+  font-size: 45px;
+  padding-bottom: 0;
+  margin: auto;
+  }
+    #sub-title {
+  font-size: 25px;
+  padding-bottom: 0;
+  margin: auto;
+  }
+
   .content-body {
     grid-template-columns: 1fr;
     grid-template-rows: .3fr .5fr 1fr;
+    gap: 0;
     
 
   }
@@ -355,8 +370,9 @@ margin-bottom: 0;
   }
 
  .heading, .best {
-    width: 75%;
     margin: auto;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
 
   .samples {
@@ -371,8 +387,6 @@ margin-bottom: 0;
   
     );
   }
-
-
 
 
 
