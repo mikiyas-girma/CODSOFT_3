@@ -2,39 +2,3 @@
   font-family: EU-bold;
   src: url(/fonts/EulogyDemo-Bold.ttf);
 }
-@font-face {
-  font-family: EU-xlight;
-  src: url(/fonts/EulogyDemo-ExtraLight.ttf);
-}
-@font-face {
-  font-family: EU-light;
-  src: url(/fonts/EulogyDemo-Light.ttf);
-}
-@font-face {
-  font-family: EU-medium;
-  src: url(/fonts/EulogyDemo-Medium.ttf);
-}
-@font-face {
-  font-family: EU-regular;
-  src: url(/fonts/EulogyDemo-Regular.ttf);
-}
-@font-face {
-  font-family: EU-semibold;
-  src: url(/fonts/EulogyDemo-SemiBold.ttf);
-}
-@font-face {
-  font-family: EU-thin;
-  src: url(/fonts/EulogyDemo-Thin.ttf);
-}
-@font-face {
-  font-family: Brogetta-reg;
-  src: url(/fonts/BROGETTA-Regular.otf);
-}
-@font-face {
-  font-family: roboto;
-  src: url(/fonts/texgyreadventor-regular.otf);
-}
-@font-face {
-  font-family: brank;
-  src: url(/fonts/allenoire-allenoire-regular-400.ttf);
-}
