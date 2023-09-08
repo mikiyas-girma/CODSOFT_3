@@ -55,7 +55,6 @@ buttons.forEach((button) => {
     else if (inputs.includes(".")) {
 
        if(operators.includes(last) && !operators.includes(button.textContent)) {
-        // inputs.push(button.textContent);
         calculate(inputs);
       }
 

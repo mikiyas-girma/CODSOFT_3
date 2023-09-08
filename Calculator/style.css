@@ -54,7 +54,6 @@
   border-radius: 10px;
   border: 10px solid #D5CEA3;
   border-bottom: none;
-  /* grid-area: screen; */
 }
 
 .buttons {
@@ -63,6 +62,5 @@
   padding-top: 10px;
   border: 10px solid  #D5CEA3;
   border-top: 5px solid  #D5CEA3;
-   /* grid-area: buttons; */
   grid-template-columns: repeat(3,1fr) 1fr ;
 }
